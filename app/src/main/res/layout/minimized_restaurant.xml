@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.rz.alon.doordashlite.models.RestaurantModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/rest_list_item_padding">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="@dimen/rest_list_restaurant_name_padding"
+            android:paddingLeft="@dimen/rest_list_restaurant_name_padding"
+            android:paddingRight="@dimen/rest_list_restaurant_name_padding"
+            android:paddingStart="@dimen/rest_list_restaurant_name_padding"
+            android:text="@{viewModel.name}"
+            android:textSize="@dimen/rest_list_restaurant_name_text_size"
+            android:textStyle="bold" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_marginRight="@dimen/rest_list_image_width"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="@dimen/rest_list_subtext_padding"
+                    android:paddingLeft="@dimen/rest_list_subtext_padding"
+                    android:paddingRight="@dimen/rest_list_subtext_padding"
+                    android:paddingStart="@dimen/rest_list_subtext_padding"
+                    android:text="@{viewModel.description}" />
+
+                <TextView
+                    android:id="@+id/tv_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="@dimen/rest_list_subtext_padding"
+                    android:paddingLeft="@dimen/rest_list_subtext_padding"
+                    android:paddingRight="@dimen/rest_list_subtext_padding"
+                    android:paddingStart="@dimen/rest_list_subtext_padding"
+                    android:text="@{`status: ` + viewModel.status}" />
+
+                <TextView
+                    android:id="@+id/tv_delivery_fee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="@dimen/rest_list_subtext_padding"
+                    android:paddingLeft="@dimen/rest_list_subtext_padding"
+                    android:paddingRight="@dimen/rest_list_subtext_padding"
+                    android:paddingStart="@dimen/rest_list_subtext_padding"
+                    android:text="@{`$` + String.valueOf(viewModel.delivery_fee == 0 ? 0 : (viewModel.delivery_fee/100)) + ` delivery`}" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_cover_img_url"
+                android:layout_width="@dimen/rest_list_image_width"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|top"
+                android:contentDescription="@string/restaurant_logo"
+                android:maxHeight="@dimen/rest_list_image_max_height"
+                android:adjustViewBounds="true"
+                app:srcFromUrl="@{viewModel.cover_img_url}" />
+        </FrameLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="rest_list_restaurant_name_padding">4dp</dimen>
+    <dimen name="rest_list_subtext_padding">10dp</dimen>
+    <dimen name="rest_list_image_max_height">65dp</dimen>
+    <dimen name="rest_list_image_width">130dp</dimen>
+    <dimen name="rest_list_item_padding">4dp</dimen>
+    <dimen name="rest_list_restaurant_name_text_size">18sp</dimen>
+</resources>
