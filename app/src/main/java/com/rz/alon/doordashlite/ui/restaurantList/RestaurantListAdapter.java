@@ -1,4 +1,4 @@
-package com.rz.alon.doordashlite.ui;
+package com.rz.alon.doordashlite.ui.restaurantList;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;

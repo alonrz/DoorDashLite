@@ -10,6 +10,19 @@ public class RestaurantModel {
     private String status;
     private int delivery_fee;
 
+    public RestaurantModel() {
+
+    }
+
+    public RestaurantModel(int id, String name, String description, URL cover_img_url, String status, int delivery_fee) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.cover_img_url = cover_img_url;
+        this.status = status;
+        this.delivery_fee = delivery_fee;
+    }
+
     public String getName() {
         return name;
     }
