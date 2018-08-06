@@ -5,12 +5,19 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.RestaurantListActivity">
+        tools:context=".ui.restaurantList.RestaurantListActivity">
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/rv_restaurants"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tv_error_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/error_loading"
+            android:visibility="gone" />
 
     </FrameLayout>
 </layout>
